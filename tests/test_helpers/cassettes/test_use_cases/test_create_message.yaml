@@ -1,0 +1,153 @@
+interactions:
+- request:
+    body: '{"messages":[{"content":"You are a temperature bot. Today is 2024-06-09.","role":"system"},{"content":"Hello,
+      will I have to use my umbrella in Lisbon tomorrow?","role":"user"}],"model":"gpt-4o","stream":false,"temperature":1.0,"tools":[{"type":"function","function":{"name":"fetch_current_temperature","description":"Fetch
+      the current temperature data for a location","parameters":{"properties":{"location":{"type":"string"}},"required":["location"],"type":"object"}}},{"type":"function","function":{"name":"fetch_forecast_temperature","description":"Fetch
+      the forecast temperature data for a location","parameters":{"type":"object","properties":{"location":{"type":"string"},"dt_str":{"description":"Date
+      in the format ''YYYY-MM-DD''","type":"string"}},"required":["location","dt_str"]}}}]}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate, zstd
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '790'
+      Content-Type:
+      - application/json
+      Host:
+      - api.openai.com
+      X-Stainless-Raw-Response:
+      - 'true'
+      authorization:
+      - DUMMY
+      cookie:
+      - DUMMY
+      user-agent:
+      - OpenAI/Python
+      x-stainless-retry-count:
+      - '0'
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"chatcmpl-Cm1fsHgySlOZR3ZLKB7Gn9tP142qP\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562216,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n
+        \           \"id\": \"call_FBdGKwdmL1m4a0T4aFX8BUEo\",\n            \"type\":
+        \"function\",\n            \"function\": {\n              \"name\": \"fetch_forecast_temperature\",\n
+        \             \"arguments\": \"{\\\"location\\\":\\\"Lisbon\\\",\\\"dt_str\\\":\\\"2024-06-10\\\"}\"\n
+        \           }\n          }\n        ],\n        \"refusal\": null,\n        \"annotations\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 116,\n    \"completion_tokens\":
+        27,\n    \"total_tokens\": 143,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_a4d13246c5\"\n}\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date: Sun, 09 Jun 2024 23:39:08 GMT
+      Server: DUMMY
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1127'
+      openai-project:
+      - proj_dummy_openai_id
+      x-envoy-upstream-service-time:
+      - '752'
+      x-openai-proxy-wasm:
+      - v0.1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"messages":[{"content":"You are a temperature bot. Today is 2024-06-09.","role":"system"},{"content":"Hello,
+      will I have to use my umbrella in Lisbon tomorrow?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_FBdGKwdmL1m4a0T4aFX8BUEo","function":{"name":"fetch_forecast_temperature","arguments":"{\"location\":
+      \"Lisbon\", \"dt_str\": \"2024-06-10\"}"}}]},{"content":"35 degrees Celsius","role":"tool","tool_call_id":"call_FBdGKwdmL1m4a0T4aFX8BUEo"}],"model":"gpt-4o","stream":false,"temperature":1.0,"tools":[{"type":"function","function":{"name":"fetch_current_temperature","description":"Fetch
+      the current temperature data for a location","parameters":{"properties":{"location":{"type":"string"}},"required":["location"],"type":"object"}}},{"type":"function","function":{"name":"fetch_forecast_temperature","description":"Fetch
+      the forecast temperature data for a location","parameters":{"type":"object","properties":{"location":{"type":"string"},"dt_str":{"description":"Date
+      in the format ''YYYY-MM-DD''","type":"string"}},"required":["location","dt_str"]}}}]}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate, zstd
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1110'
+      Content-Type:
+      - application/json
+      Host:
+      - api.openai.com
+      X-Stainless-Raw-Response:
+      - 'true'
+      authorization:
+      - DUMMY
+      cookie:
+      - DUMMY
+      user-agent:
+      - OpenAI/Python
+      x-stainless-retry-count:
+      - '0'
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"chatcmpl-Cm1fuFZ4f2pnfGOsFqe0z9wkWPkjM\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562218,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"The forecast temperature for Lisbon
+        tomorrow is 35\xB0C. It seems to be a clear day, so you probably won't need
+        your umbrella.\",\n        \"refusal\": null,\n        \"annotations\": []\n
+        \     },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n
+        \ ],\n  \"usage\": {\n    \"prompt_tokens\": 156,\n    \"completion_tokens\":
+        28,\n    \"total_tokens\": 184,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_a4d13246c5\"\n}\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date: Sun, 09 Jun 2024 23:39:08 GMT
+      Server: DUMMY
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '928'
+      openai-project:
+      - proj_dummy_openai_id
+      x-envoy-upstream-service-time:
+      - '1072'
+      x-openai-proxy-wasm:
+      - v0.1
+    status:
+      code: 200
+      message: OK
+version: 1

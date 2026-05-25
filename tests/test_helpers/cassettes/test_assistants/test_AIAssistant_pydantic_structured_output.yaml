@@ -1,0 +1,160 @@
+interactions:
+- request:
+    body: '{"messages":[{"content":"You are a helpful assistant that provides information
+      about people.","role":"system"},{"content":"Tell me about John who is 30 years
+      old and not a student.","role":"user"}],"model":"gpt-4o-2024-08-06","stream":false,"temperature":1.0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate, zstd
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '259'
+      Content-Type:
+      - application/json
+      Host:
+      - api.openai.com
+      X-Stainless-Raw-Response:
+      - 'true'
+      authorization:
+      - DUMMY
+      cookie:
+      - DUMMY
+      user-agent:
+      - OpenAI/Python
+      x-stainless-retry-count:
+      - '0'
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"chatcmpl-Cm1gAL3vuGjwwDwXJjvKtn6a7xX8o\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562234,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"I'm sorry, but I need more specific
+        information to provide details about a person named John who is 30 years old
+        and not a student. \\\"John\\\" is a very common name, and without additional
+        details, it's challenging to identify or describe someone accurately.\\n\\nIf
+        you have more information or context about John, such as his last name, his
+        current occupation, location, or any public achievements or works, I might
+        be able to help more effectively. However, please remember to respect privacy
+        and confidentiality when sharing personal details.\",\n        \"refusal\":
+        null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n
+        \     \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        37,\n    \"completion_tokens\": 103,\n    \"total_tokens\": 140,\n    \"prompt_tokens_details\":
+        {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_37d212baff\"\n}\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date: Sun, 09 Jun 2024 23:39:08 GMT
+      Server: DUMMY
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1346'
+      openai-project:
+      - proj_dummy_openai_id
+      x-envoy-upstream-service-time:
+      - '3451'
+      x-openai-proxy-wasm:
+      - v0.1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"messages":[{"content":"You are a helpful assistant that provides information
+      about people.\nUse the chat history to produce a JSON output.","role":"system"},{"content":"Tell
+      me about John who is 30 years old and not a student.","role":"user"},{"content":"I''m
+      sorry, but I need more specific information to provide details about a person
+      named John who is 30 years old and not a student. \"John\" is a very common
+      name, and without additional details, it''s challenging to identify or describe
+      someone accurately.\n\nIf you have more information or context about John, such
+      as his last name, his current occupation, location, or any public achievements
+      or works, I might be able to help more effectively. However, please remember
+      to respect privacy and confidentiality when sharing personal details.","role":"assistant"},{"content":"Use
+      the chat history to produce a JSON output.","role":"user"}],"model":"gpt-4o-2024-08-06","response_format":{"type":"json_schema","json_schema":{"schema":{"properties":{"name":{"title":"Name","type":"string"},"age":{"title":"Age","type":"integer"},"is_student":{"title":"Is
+      Student","type":"boolean"}},"required":["name","age","is_student"],"title":"OutputSchema","type":"object","additionalProperties":false},"name":"OutputSchema","strict":true}},"stream":false,"temperature":1.0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate, zstd
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1316'
+      Content-Type:
+      - application/json
+      Host:
+      - api.openai.com
+      X-Stainless-Helper-Method:
+      - chat.completions.parse
+      X-Stainless-Raw-Response:
+      - 'true'
+      authorization:
+      - DUMMY
+      cookie:
+      - DUMMY
+      user-agent:
+      - OpenAI/Python
+      x-stainless-retry-count:
+      - '0'
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"chatcmpl-Cm1gDYq4ErofSm26ezPhe4VaGdPKu\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562237,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"{\\\"name\\\":\\\"John\\\",\\\"age\\\":30,\\\"is_student\\\":false}\",\n
+        \       \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        231,\n    \"completion_tokens\": 14,\n    \"total_tokens\": 245,\n    \"prompt_tokens_details\":
+        {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date: Sun, 09 Jun 2024 23:39:08 GMT
+      Server: DUMMY
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '855'
+      openai-project:
+      - proj_dummy_openai_id
+      x-envoy-upstream-service-time:
+      - '713'
+      x-openai-proxy-wasm:
+      - v0.1
+    status:
+      code: 200
+      message: OK
+version: 1
